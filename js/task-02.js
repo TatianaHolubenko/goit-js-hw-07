@@ -1,3 +1,5 @@
+// Завдання 2
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -24,3 +26,15 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const galleryUl = document.querySelector('.gallery');
+
+const newListItem = images.reduce(
+  (html, image) =>
+    html +
+    `<li class= "gallery-list"><img src="${image.url}" alt="${image.alt}" width="360px" height="250px"></li>`,
+  ''
+);
+
+galleryUl.insertAdjacentHTML('beforeend', newListItem);
+console.log(galleryUl);
