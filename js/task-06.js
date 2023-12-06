@@ -14,12 +14,12 @@ function getRandomHexColor() {
 function createBoxes(amount) {
   destroyBoxes();
 
-  let size = 30;
-  const moreOn = 10;
-  const array = [];
-
   const newAmount = Number(input.value);
   if (newAmount >= 1 && newAmount <= 100) {
+    let size = 30;
+    const moreOn = 10;
+    const array = [];
+
     for (let i = 0; i < amount; i++) {
       const newDiv = document.createElement('div');
       newDiv.style.backgroundColor = getRandomHexColor();
