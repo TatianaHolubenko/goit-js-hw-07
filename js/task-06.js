@@ -31,6 +31,7 @@ function createBoxes(amount) {
   boxes.append(...array);
 
   console.log(`Create, ${amount}`);
+   
 }
 
 function destroyBoxes() {
